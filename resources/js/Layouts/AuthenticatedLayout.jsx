@@ -25,6 +25,16 @@ export default function Authenticated({ auth, header, children }) {
                                     Dashboard
                                 </NavLink>
                             </div>
+                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <NavLink href={route('inscricao.index')} active={route().current('inscricao.index')}>
+                                    Inscrições
+                                </NavLink>
+                            </div>
+                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <NavLink href={route('evento.index')} active={route().current('evento.index')}>
+                                    Eventos
+                                </NavLink>
+                            </div>
                         </div>
 
                         <div className="hidden sm:flex sm:items-center sm:ml-6">

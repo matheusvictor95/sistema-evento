@@ -1,6 +1,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 import Navbar from '@/Components/NavbarComponent';
+import NavbarComponent from '@/Components/NavbarComponent';
 
 
 export default function Dashboard(props) {
@@ -10,6 +11,7 @@ export default function Dashboard(props) {
             auth={props.auth}
             errors={props.errors}
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
+                   
         >
             <Head title="Dashboard" />
           
