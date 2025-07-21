@@ -11,7 +11,7 @@ class Evento extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = ['nome','data','localizacao','descricao','kit'];
-       public function inscricao()
+       public function inscricoes()
     {
         return $this->hasMany(Inscricao::class);
     }

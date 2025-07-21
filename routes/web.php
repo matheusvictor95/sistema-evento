@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InscricaoController;
+use App\Http\Controllers\EventoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -39,5 +40,9 @@ Route::middleware('auth')->group(function () {
 Route::get('/inscricao', [InscricaoController::class, 'index'])->name('inscricao.index');
 Route::get('/inscricao/create', [InscricaoController::class, 'create'])->name('inscricao.create');
 Route::get('/inscricao/{id}', [InscricaoController::class, 'show'])->name('inscricao.show');
+
+Route::get('/evento', [EventoController::class, 'index'])->name('evento.index');
+Route::get('/evento/create', [EventoController::class, 'create'])->name('evento.create');
+Route::get('/evento/{id}', [EventoController::class, 'show'])->name('evento.show');
 
 require __DIR__.'/auth.php';
