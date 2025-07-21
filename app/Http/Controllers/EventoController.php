@@ -27,13 +27,13 @@ class EventoController extends Controller
     public function create()
     {
      
-        return Inertia::render('Evento/create');
+        return Inertia::render('Evento/Create');
     }
 
   
     public function show($id)
     {
-     return Inertia::render('Evento/show', [
+     return Inertia::render('Evento/Show', [
         'evento' => $id
      ]);
     }
