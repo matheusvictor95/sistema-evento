@@ -44,5 +44,6 @@ Route::get('/inscricao/{id}', [InscricaoController::class, 'show'])->name('inscr
 Route::get('/evento', [EventoController::class, 'index'])->name('evento.index');
 Route::get('/evento/create', [EventoController::class, 'create'])->name('evento.create');
 Route::get('/evento/{id}', [EventoController::class, 'show'])->name('evento.show');
+Route::post('/evento/store', [EventoController::class, 'store'])->name('evento.store');
 
 require __DIR__.'/auth.php';

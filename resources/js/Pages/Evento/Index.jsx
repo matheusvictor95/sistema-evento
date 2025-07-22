@@ -41,7 +41,7 @@ export default function EventoIndex({ eventos }) {
 
             {!temEventos && (
                 <div className="p-6 bg-white rounded shadow text-gray-700 text-center">
-                    Nenhum Evento Cadastrado, por favor cadastre um evento <a href="/eventos/create" className="text-blue-500">aqui</a>.
+                    Nenhum Evento Cadastrado, por favor cadastre um evento <a href="/evento/create" className="text-blue-500">aqui</a>.
                 </div>
             )}
         </EventoLayout>

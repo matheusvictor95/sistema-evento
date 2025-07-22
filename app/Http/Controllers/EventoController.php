@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Http\Requests\StoreEventoRequest;
 use App\Models\Evento;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
@@ -26,8 +27,17 @@ class EventoController extends Controller
     
     public function create()
     {
-     
+    
         return Inertia::render('Evento/Create');
+    }
+
+    public function store(StoreEventoRequest $request)
+    {
+        $evento = Evento::create($request->validated());
+        return Inertia::render('Evento/Index',[
+            'evento' => $evento,
+        ]);
+       
     }
 
   
