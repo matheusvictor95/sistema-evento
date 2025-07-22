@@ -21,6 +21,7 @@ export default function EventoIndex({ eventos }) {
                                 <th className="text-left px-4 py-2 border-b">Localização</th>
                                 <th className="text-left px-4 py-2 border-b">Kit</th>
                                 <th className="text-left px-4 py-2 border-b">Descrição</th>
+                                <th className="text-left px-4 py-2 border-b">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,10 +29,11 @@ export default function EventoIndex({ eventos }) {
                                 <tr key={evento.id} className="hover:bg-gray-50">
                                     <td className="px-4 py-2 border-b">{index + 1}</td>
                                     <td className="px-4 py-2 border-b">{evento.nome}</td>
-                                    <td className="px-4 py-2 border-b">{evento.data}</td>
+                                    <td className="px-4 py-2 border-b">{new Date(evento.data).toLocaleDateString()}</td>
                                     <td className="px-4 py-2 border-b">{evento.localizacao}</td>
                                     <td className="px-4 py-2 border-b">{evento.kit ? evento.kit : 'Não possui kit'}</td>
-                                     <td className="px-4 py-2 border-b">{evento.descricao}</td>
+                                    <td className="px-4 py-2 border-b">{evento.descricao}</td>
+
                                 </tr>
                             ))}
                         </tbody>

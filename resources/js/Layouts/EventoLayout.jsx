@@ -1,3 +1,4 @@
+import SecondaryButton from '@/Components/SecondaryButton';
 import React from 'react';
 
 export default function EventoLayout({ children }) {
@@ -6,6 +7,9 @@ export default function EventoLayout({ children }) {
             <header className="bg-white shadow">
                 <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
                     <h1 className="text-2xl font-bold text-gray-900">Eventos</h1>
+                    <div className="flex justify-end">
+                        <a href="/evento/create"><SecondaryButton>Novo Evento</SecondaryButton></a>
+                    </div>
                 </div>
             </header>
             <main className="flex-grow">

@@ -21,7 +21,7 @@ export default function FormEvento() {
         <FormLayout>
             <form onSubmit={submit} className="space-y-12">
                 <div>
-                    <label  className="block text-sm/6 font-medium text-gray-900" >Nome </label>
+                    <label className="block text-sm/6 font-medium text-gray-900" >Nome </label>
                     <input
                         type="text"
                         value={data.nome}
@@ -31,7 +31,7 @@ export default function FormEvento() {
                 </div>
 
                 <div>
-                    <label  className="block text-sm/6 font-medium text-gray-900">Data </label>
+                    <label className="block text-sm/6 font-medium text-gray-900">Data </label>
                     <input
                         type="date"
                         value={data.data}
@@ -41,7 +41,7 @@ export default function FormEvento() {
                 </div>
 
                 <div>
-                    <label  className="block text-sm/6 font-medium text-gray-900">Localização </label>
+                    <label className="block text-sm/6 font-medium text-gray-900">Localização </label>
                     <input
                         type="text"
                         value={data.localizacao}
@@ -51,7 +51,7 @@ export default function FormEvento() {
                 </div>
 
                 <div>
-                    <label  className="block text-sm/6 font-medium text-gray-900">Descrição </label>
+                    <label className="block text-sm/6 font-medium text-gray-900">Descrição </label>
                     <textarea
                         value={data.descricao}
                         onChange={e => setData('descricao', e.target.value)}
@@ -60,7 +60,7 @@ export default function FormEvento() {
                 </div>
 
                 <div>
-                    <label  className="block text-sm/6 font-medium text-gray-900">Kit </label>
+                    <label className="block text-sm/6 font-medium text-gray-900">Kit </label>
                     <input
                         type="text"
                         value={data.kit}
@@ -68,10 +68,11 @@ export default function FormEvento() {
                     />
                     {errors.kit && <div className="text-red-500">{errors.kit}</div>}
                 </div>
-
-                <PrimaryButton type="submit" disabled={processing}>
-                    Salvar
-                </PrimaryButton>
+                <div className="">
+                    <PrimaryButton type="submit" disabled={processing}>
+                        Salvar
+                    </PrimaryButton>
+                </div>
             </form>
         </FormLayout>
 
